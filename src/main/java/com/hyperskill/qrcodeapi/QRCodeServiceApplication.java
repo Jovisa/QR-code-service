@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QrcodeapiApplication {
+public class QRCodeServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QrcodeapiApplication.class, args);
+		SpringApplication.run(QRCodeServiceApplication.class, args);
 	}
 
 }
