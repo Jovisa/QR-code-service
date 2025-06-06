@@ -4,14 +4,12 @@ import com.hyperskill.qrcodeapi.model.QRCodeData;
 import com.hyperskill.qrcodeapi.model.QRServiceRequest;
 import com.hyperskill.qrcodeapi.service.QrCodeService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.awt.image.BufferedImage;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class QrCodeController {
@@ -22,6 +20,11 @@ public class QrCodeController {
         this.qrCodeService = qrCodeService;
     }
 
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("GRRRRRRRRRRRR!");
+    }
 
     @GetMapping("/health")
     public ResponseEntity<Void> getHealth() {
